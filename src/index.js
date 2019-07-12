@@ -1,5 +1,6 @@
 'use strict'
 import './main.scss'
+const musik = require('./music.ogg')
 const DateTime = require('luxon').DateTime
 const Interval = require('luxon').Interval
 
@@ -37,8 +38,32 @@ function draw(e) {
         }
     }
 }
+
+
 draw(NaN)
 window.addEventListener('resize', e => {
 
+
+})
+
+
+
+window.addEventListener('load', e => {
+    var audio = new Audio(musik)
+    document.body.appendChild(audio)
+    audio.controls = true
+    audio.loop = true
+    audio.pause()
+    audio.play()
+    // document.getElementById('ai').src = musik
+    // document.getElementById('ai').setAttribute('src', musik)
+    // setTimeout(t => document.getElementById('ai').play().catch(e => console.log(document.getElementById('ai')))
+    //     , 2000)        
+    // var prom = audio.play().then()
+    // if (prom !== null) {
+    //     prom.catch(() => {
+    //         document.getElementsByTagName('audio')[0].pause().then(r => setTimeout(e => document.getElementsByTagName('audio')[0].play(), 5000))
+    //     })
+    // }
 })
 setInterval(e => draw(e), 1000, 200)
