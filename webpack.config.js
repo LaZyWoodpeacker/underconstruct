@@ -64,6 +64,7 @@ module.exports = {
 	},
 
 	devServer: {
-		open: false
+		open: false,
+		port: 3000
 	}
 };
