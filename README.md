@@ -1,15 +1,7 @@
-# 🚀 Welcome to your new awesome project!
-
-This project has been created using **webpack scaffold**, you can now run
+# Собирает вебпаком всё в один html файл. Скрипты и картинки inline.
 
 ```
 npm run build
 ```
 
-or
 
-```
-yarn build
-```
-
-to bundle your application
